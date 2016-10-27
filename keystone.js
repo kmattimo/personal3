@@ -74,6 +74,8 @@ keystone.set('email tests', require('./routes/emails'));
 
 
 // Switch Keystone Email defaults to handlebars
+
+//TODO:
 //keystone.Email.defaults.templateExt = 'hbs';
 //keystone.Email.defaults.templateEngine = require('handlebars');
 
