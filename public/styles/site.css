@@ -41,3 +41,8 @@ html.particle-page, body.particle-page {
   position: fixed;
   left: 0;
   top: 0; }
+
+.intro-image {
+  width: 30%;
+  height: auto;
+  opacity: .9; }
