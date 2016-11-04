@@ -26,7 +26,12 @@
     canvasH = window.innerHeight;
     console.log(canvasW + ", " + canvasH);
     
-    var numMovers   = 600;
+    var numMovers   = 500;
+    if(window.settings && window.settings.particleCount) {
+      numMovers = window.settings.particleCount;
+    }
+    console.log('particle count: ' + numMovers);
+    
     var friction    = 0.97;
     var movers      = [];
     
@@ -195,12 +200,14 @@
 
     function onDocMouseDown( e ){
         isMouseDown = true;
-        return false;
+    //we don't want to kill other event handlers    
+    //    return false;
     }
 
     function onDocMouseUp( e ){
         isMouseDown = false;
-        return false;
+    //we don't want to kill other event handlers    
+    //    return false;
     }
 
 

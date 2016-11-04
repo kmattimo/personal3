@@ -6,10 +6,14 @@ html.particle-page, body.particle-page {
 			  text-align: center;
 			  margin:0;
 			  padding:0;
-			  background: #000000;
-			  color: #666666;
+			  background-color: $color-background-dark;
+			  color: $color-text-light;
 			  line-height: 1.25em;
         position: relative;
+				
+				box-sizing: border-box;
+				// min-width: 100vw;
+				// min-height: 100vh;
 		  }
 
 #outer {
@@ -19,6 +23,7 @@ html.particle-page, body.particle-page {
        width: 1px;
        height: 1px;
        overflow: visible;
+			 z-index: 0;
      }
      
      #canvasContainer {
@@ -27,14 +32,17 @@ html.particle-page, body.particle-page {
        height: $canvasHeight;
        top:  -( $canvasHeight / 2 );
        left: -( $canvasWidth / 2);
+			 z-index: 0;
      }
      
      
 .particleCanvas {
+	background-color: $color-background-dark;
   display: block;
   position: fixed;
   left: 0;
   top: 0;
+	z-index: 0;
   // width: $canvasWidth;
   // height: $canvasHeight;
 }

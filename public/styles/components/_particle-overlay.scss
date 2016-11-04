@@ -1,0 +1,9 @@
+.particle-overlay {
+  // background-color: rbga($color-backtgound-dark, .5);
+  background-color: $color-background-dark;
+  position: relative;
+  z-index: 3;
+  width: 70vw;
+  margin-left: 15vw;
+
+}

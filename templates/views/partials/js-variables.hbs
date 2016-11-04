@@ -1,0 +1,10 @@
+<script>
+  console.log('applying server-side stuff');
+  window.settings = new Object();
+  window.settings.test = "asdf";
+  
+{{#if settings.particleCount}}
+  window.settings.particleCount = {{settings.particleCount}}
+{{/if}}
+
+</script>

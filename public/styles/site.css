@@ -1,3 +1,6 @@
+html {
+  font-family: Helvetica, Arial, sans-serif; }
+
 #header {
   margin-top: 30px; }
 
@@ -16,10 +19,11 @@ html.particle-page, body.particle-page {
   text-align: center;
   margin: 0;
   padding: 0;
-  background: #000000;
-  color: #666666;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #a3a3a3;
   line-height: 1.25em;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
 
 #outer {
   position: fixed;
@@ -27,22 +31,33 @@ html.particle-page, body.particle-page {
   left: 50vw;
   width: 1px;
   height: 1px;
-  overflow: visible; }
+  overflow: visible;
+  z-index: 0; }
 
 #canvasContainer {
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: -50vh;
-  left: -50vw; }
+  left: -50vw;
+  z-index: 0; }
 
 .particleCanvas {
+  background-color: rgba(0, 0, 0, 0.7);
   display: block;
   position: fixed;
   left: 0;
-  top: 0; }
+  top: 0;
+  z-index: 0; }
 
 .intro-image {
   width: 30%;
   height: auto;
   opacity: .9; }
+
+.particle-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 3;
+  width: 70vw;
+  margin-left: 15vw; }

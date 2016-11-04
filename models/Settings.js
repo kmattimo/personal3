@@ -13,9 +13,9 @@ Settings.add({
   particleCount: { type: Number, initial: 300 },
   
   personal: {
-    resume: { types: Types.Url }, 
-    message: { types: Types.Html, wysiwyg: true },
-  },
+    resume: { type: Types.Url }, 
+    message: { type: Types.Html, wysiwyg: true },
+  }
 
 });
 

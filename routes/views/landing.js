@@ -8,6 +8,9 @@ exports = module.exports = function (req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
+	
+	view.query('page', keystone.list('HomePage').model.findOne());
+	view.query('settings', keystone.list('Settings').model.findOne());
 
 	// Render the view
 	view.render('landing', {layout: 'particles'});
