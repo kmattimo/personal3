@@ -219,12 +219,18 @@ html.particle-page, body.particle-page {
   .slide-over ul {
     list-style: none;
     column-count: 2; }
+    @media (max-width: 480px) {
+      .slide-over ul {
+        column-count: 1; } }
   .slide-over__inner {
     line-height: 1.3;
     margin: 20px;
     width: 70%;
     display: inline-block;
     text-align: left; }
+    @media (max-width: 768px) {
+      .slide-over__inner {
+        width: 95%; } }
   .slide-over__image {
     width: 100%;
     height: auto; }
