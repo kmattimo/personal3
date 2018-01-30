@@ -11,7 +11,8 @@ Project.add({
   content: {
        brief: { type: Types.Textarea, wysiwyg: true, height: 150, initial: true },
        extended: { type: Types.Html, wysiwyg: true, height: 400 }
-   }
+   },
+	 show: {type: Types.Boolean, default:true}
 
 });
 

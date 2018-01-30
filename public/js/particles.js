@@ -26,13 +26,16 @@
     canvasH = window.innerHeight;
     console.log(canvasW + ", " + canvasH);
     
-    var numMovers   = 500;
+    var numMovers   = 100;
     if(window.settings && window.settings.particleCount) {
       numMovers = window.settings.particleCount;
     }
     console.log('particle count: ' + numMovers);
     
     var friction    = 0.97;
+    var refreshMS = 33;
+    var randomBlowUp = false;
+    var blowUpFrameCount = 0;
     var movers      = [];
     
     var canvas;
@@ -48,13 +51,26 @@
     var prevMouseY;
     var isMouseDown;
 
+    function randomChance1() {
+      return ( Math.random() < .0001 );
+    }
+    
+    
+    timeBomb();
+    function timeBomb() {
+      randomBlowUp = true;
+      blowUpFrameCount = 5 + Math.floor( Math.random() * 10) ;
+      
+      setTimeout(timeBomb, (15 + Math.floor(Math.random() * 15 * 1000 )));
+    }
 
+    
     function init(){
         canvas = document.getElementById("mainCanvas");
         
         if ( canvas.getContext ){
             setup();
-            setInterval( run , 33 );
+            setInterval( run , refreshMS );
             
         }
         else{
@@ -110,6 +126,8 @@
         var Mrnd = Math.random;
         var Mabs = Math.abs;
         
+        if(randomBlowUp) blowUpFrameCount --; 
+        
         var i = numMovers;
         while ( i-- ){
             var m  = movers[i];
@@ -124,7 +142,7 @@
             dX /= d;
             dY /= d;
             
-            if ( isMouseDown ){
+            if ( isMouseDown || randomBlowUp || randomChance1() ){
                 if ( d < blowDist ){
                     var blowAcc = ( 1 - ( d / blowDist ) ) * 14;
                     vX += dX * blowAcc + 0.5 - Mrnd();
@@ -189,6 +207,8 @@
             ctx.closePath();
             ctx.fill();        
         }
+        if(blowUpFrameCount <= 0) 
+          randomBlowUp = false;
     }
 
 

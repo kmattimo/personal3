@@ -1,13 +1,25 @@
 // Override Bootstrap variables in this file, e.g.
 
 $font-size-base: 14px;
-$font-family-body: Helvetica, Arial, sans-serif;
+$font-family-body: Noto Sans, sans-serif;
 
+$font-family-heading: Noto Serif, serif;
 
 $color-text-light: #a3a3a3;
-$color-background-dark: rgba(#000000, .7);
+// $color-background-dark: rgba(#000000, .7);
+$color-background-dark: rgba(#000000, .85);
+$transparent-black: $color-background-dark;
 
 $bp-tiny: 480px;
 $bp-small: 768px;
 $bp-med: 992px;
 $bp-lg: 1200px;
+
+// $mobile-break: 600px;
+// $tablet-break: 768px;
+// $desktop-break: 1024px;
+// $huge-break: 1200px; 
+
+//dirty calculation for keeping the content below the image at first
+//changed to vh instead
+$image-margin : 60vh;

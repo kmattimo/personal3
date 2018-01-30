@@ -1,0 +1,24 @@
+{{!< default}}
+
+<div class="fullscreen-background"
+    {{#if page.background}}
+        style="background-image: url('{{page.background.image.secure_url}}')"
+    {{/if}}
+>
+  
+</div>
+
+<div class="slide-over dark">
+    
+  <div class="slide-over__inner">
+    <h1>{{page.name}}</h1>
+      <div>
+        {{{page.text}}}
+      </div>
+  </div>
+
+{{#each page.images}}
+  <img class="slide-over__image" src="{{this.image.secure_url}}">
+{{/each}}
+  
+</div>

@@ -1,0 +1,30 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+
+  
+}
+
+.project {
+  width: 300px;
+  min-height: 200px;
+  background-size: cover;
+  opacity: .7;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.project-title {
+  font-size: 16px;
+  
+}
+
+.project-link {
+  font-size: 16px;
+}

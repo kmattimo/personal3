@@ -2,8 +2,47 @@ html {
 	font-family: $font-family-body;
 }
 
+h1,h2,h3,h4,h5,h6,.heading {
+	font-family: $font-family-heading
+}
+
+.dark {
+	background-color: #000;
+	color: $color-text-light;
+	a {
+		color: $color-text-light;
+	}
+}
+
 #header {
 	margin-top: 30px;
+}
+
+.column {
+	display: inline-block;
+	&--half {
+		float: left;
+		width:50%;
+		// display: inline-block;
+		
+	}
+	&--third {
+		float: left;
+		width: 33%;
+		// display: inline-block;
+		
+	}
+	&--quarter {
+		float:left;
+		width: 25%;
+		// display: inline-block;
+		
+	}
+}
+
+.two-column {
+	column-count: 2;
+	margin-top: 1em;
 }
 
 #footer {
@@ -17,4 +56,10 @@ html {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+
+.unstyled-link {
+	text-decoration: none;
+	color: inherit;
 }

@@ -7,11 +7,11 @@ exports = module.exports = function (req, res) {
 
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
-	locals.section = 'home';
+	locals.section = 'studio';
 	
-	view.query('page', keystone.list('HomePage').model.findOne().populate('imageLeft imageRight'));
+	view.query('page', keystone.list('StudioPage').model.findOne().populate('images background'));
 	view.query('settings', keystone.list('Settings').model.findOne());
-	view.query('projects', keystone.list('Project').model.find());
+	// view.query('projects', keystone.list('Project').model.find());
 	// Render the view
-	view.render('landing', {layout: 'particles'});
+	view.render('studio');
 };

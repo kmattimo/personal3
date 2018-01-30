@@ -1,0 +1,16 @@
+<h2> Projects</h2>
+
+<div class="projects"> 
+  
+  {{# each projects}}
+    <div class="project"> 
+      <div class="project-title"> 
+        <a class="project-link unstyled-link" href="/project/{{slug}}"> {{title}} </a>
+      </div>
+      <div class="project-tile" {{#if image}} style="background-image:{{image.image.secure_url}}" {{/if}} > 
+        {{content.brief}}
+      </div>
+      
+    </div>
+  {{/each}}
+</div>

@@ -39,6 +39,8 @@ exports = module.exports = function (app) {
 	app.get('/gallery', routes.views.gallery);
 	
 	app.get('/', routes.views.landing);
+	app.get('/studio', routes.views.studio);
+	
 	
 	app.all('/contact', routes.views.contact);
 	app.get('/check', routes.api.check);
